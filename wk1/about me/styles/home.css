@@ -1,0 +1,12 @@
+body {
+    background-color: azure;   
+}
+p{
+    font-size: 150%;
+    text-align: center;
+    color: silver   
+}
+
+.smallParagraph{
+    font-size: 15px;
+}
