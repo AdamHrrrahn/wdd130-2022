@@ -1,0 +1,46 @@
+body{
+    background-color:#fca6c9;
+    text-align: center;
+    margin: 0 auto;
+    width: 500px;
+}
+
+h1:hover{
+    color: #000000;
+}
+ol li{
+    text-align: left;
+    font-weight: bold;
+    line-height: 200%;
+    /* margin: 0 auto; */
+}
+#quote{
+    font-size: 40px;
+    width: 420px;
+    margin: 0 auto;
+}
+footer{
+    padding-top: 30px;
+}
+footer p{
+    /* line-height: 100%px; */
+    width: 400px;
+    margin: 0 auto;
+    font-weight: Bold;
+}
+
+.sans{
+    font-family: Verdana, sans-serif;
+}
+
+.white{
+    color:#ffffff;
+}
+
+.small_font{
+    font-size: 95%;
+}
+
+img{
+    width: 200px;
+}
