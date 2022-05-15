@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti|PT+serif');
+
+:root {
+    --dark-color: #17183b;
+    --light-color: #fbfffe ;
+    --accent1-color: #ffbf00;
+    --accent2-color: #2176ae;
+    --heading-font: "Calligraffitti";
+    --paragraph-font: 'PT serif';
+  }
+
+#content{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+nav a{
+    text-align: center;
+    color: var(--accent1-color);
+    text-decoration: none;
+}
+
+#hero-msg h1, #hero-msg h4, .button-box, main section{
+    text-align: center;
+}
+
+#background{
+    height: 726px;
+}
+
+header, #background, .msg, footer, footer h3 a{
+    background-color: var(--dark-color);
+    color: var(--light-color);
+
+}
+
+nav{
+    background-color: var(--accent2-color);
+}
+
+.book, .join{
+    color: var(--accent1-color);
+    background-color: var(--accent2-color);
+}
+
+.book:hover, .join:hover, nav a:hover{
+    background-color: var(--dark-color);
+    color: var(--accent1-color);
+}
+
+body{
+    background-color: var(--light-color);
+    font-family: var(--paragraph-font);
+}
+
+.book, .join, footer a{
+    text-decoration: none;
+}
+
+footer h3{
+    font-family: var(--paragraph-font);
+}
+
+h1, h2, h3, h4{
+    font-family: var(--heading-font);
+}
