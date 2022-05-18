@@ -2,6 +2,7 @@
 
 :root {
     --dark-color: #17183b;
+    --mid-color: #d5c67c;
     --light-color: #fbfffe ;
     --accent1-color: #ffbf00;
     --accent2-color: #2176ae;
@@ -41,6 +42,10 @@ nav{
 .book, .join{
     color: var(--accent1-color);
     background-color: var(--accent2-color);
+    font-size: 18px;
+    padding: 15px 35px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 
 .book:hover, .join:hover, nav a:hover{
@@ -51,6 +56,9 @@ nav{
 body{
     background-color: var(--light-color);
     font-family: var(--paragraph-font);
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
 }
 
 .book, .join, footer a{
@@ -63,4 +71,43 @@ footer h3{
 
 h1, h2, h3, h4{
     font-family: var(--heading-font);
+}
+.home-title{
+    font-size: 2em;
+    margin-top: 10px;
+}
+.msg p{
+    font-size: 0.8em;
+    padding-bottom: 15px;
+}
+.msg{
+    line-height: 1.5em;
+}
+h2{
+    margin: 0;
+}
+nav a, .msg{
+    padding: 35px;
+}
+footer .social img{
+    padding-top: 15px;
+}
+#logo-link{
+    padding-top: 5px;
+}
+.icon{
+    padding-top: 10px;
+}
+footer{
+    padding: 25px, 50px;
+    margin-top: 200px;
+}
+.card{
+    margin: 200px, 0;
+}
+.card-img{
+    border: 10px solid var(--dark-color);
+}
+main section img{
+    box-sizing: border-box;
 }
