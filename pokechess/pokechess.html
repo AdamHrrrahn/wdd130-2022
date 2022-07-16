@@ -4,265 +4,275 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokechess</title>
+    <title>Pokechess Game</title>
     <link rel="stylesheet" href="./styles/pokechess_style.css">
 </head>
 <body>
-    <div id="new_game_select">
-        <div class="player_div">
-            <div>
-                <h1>Player 1</h1>
-                <p>Type: 
-                    <select id="player1"> 
-                        <option id='p1_Normal' value="Normal">Normal</option>
-                        <option id='p1_Fighting' value="Fighting" hidden>Fighting</option>
-                        <option id='p1_Flying' value="Flying">Flying</option>
-                        <option id='p1_Poison' value="Poison">Poison</option>
-                        <option id='p1_Ground' value="Ground">Ground</option>
-                        <option id='p1_Rock' value="Rock">Rock</option>
-                        <option id='p1_Bug' value="Bug">Bug</option>
-                        <option id='p1_Ghost' value="Ghost">Ghost</option>
-                        <option id='p1_Steel' value="Steel">Steel</option>
-                        <option id='p1_Fire' value="Fire">Fire</option>
-                        <option id='p1_Water' value="Water">Water</option>
-                        <option id='p1_Grass' value="Grass">Grass</option>
-                        <option id='p1_Electric' value="Electric">Electric</option>
-                        <option id='p1_Psychic' value="Psychic">Psychic</option>
-                        <option id='p1_Ice' value="Ice">Ice</option>
-                        <option id='p1_Dragon' value="Dragon">Dragon</option>
-                        <option id='p1_Dark' value="Dark">Dark</option>
-                    </select>
-                </p>
-            </div>
-            <div>
-                <h1>Player 2</h1>
-                <p>Type: 
-                    <select id="player2">
-                        <option id="p2_Normal" value="Normal" hidden>Normal</option>
-                        <option id="p2_Fighting" value="Fighting" selected>Fighting</option>
-                        <option id="p2_Flying" value="Flying">Flying</option>
-                        <option id="p2_Poison" value="Poison">Poison</option>
-                        <option id="p2_Ground" value="Ground">Ground</option>
-                        <option id="p2_Rock" value="Rock">Rock</option>
-                        <option id="p2_Bug" value="Bug">Bug</option>
-                        <option id="p2_Ghost" value="Ghost">Ghost</option>
-                        <option id="p2_Steel" value="Steel">Steel</option>
-                        <option id="p2_Fire" value="Fire">Fire</option>
-                        <option id="p2_Water" value="Water">Water</option>
-                        <option id="p2_Grass" value="Grass">Grass</option>
-                        <option id="p2_Electric" value="Electric">Electric</option>
-                        <option id="p2_Psychic" value="Psychic">Psychic</option>
-                        <option id="p2_Ice" value="Ice">Ice</option>
-                        <option id="p2_Dragon" value="Dragon">Dragon</option>
-                        <option id="p2_Dark" value="Dark">Dark</option>
-                    </select>
-                </p>
-            </div>
-        </div>
-        <button id="start_game">Start Game</button>
-        <div id="loading" hidden></div>
-    </div>
-    <div id="game" hidden>
-        <div>
-            <div class="game_div" id="board_div">
-                <table id="board">
-                    <tr>
-                        <td id="t1_1" class="space"></td>
-                        <td id="t1_2" class="space"></td>
-                        <td id="t1_3" class="space"></td>
-                        <td id="t1_4" class="space"></td>
-                        <td id="t1_5" class="space"></td>
-                        <td id="t1_6" class="space"></td>
-                        <td id="t1_7" class="space"></td>
-                        <td id="t1_8" class="space"></td>
-                    </tr>
-                    <tr>
-                        <td id="t2_1" class="space"></td>
-                        <td id="t2_2" class="space"></td>
-                        <td id="t2_3" class="space"></td>
-                        <td id="t2_4" class="space"></td>
-                        <td id="t2_5" class="space"></td>
-                        <td id="t2_6" class="space"></td>
-                        <td id="t2_7" class="space"></td>
-                        <td id="t2_8" class="space"></td>
-                    </tr>
-                    <tr>
-                        <td id="t3_1" class="space"></td>
-                        <td id="t3_2" class="space"></td>
-                        <td id="t3_3" class="space"></td>
-                        <td id="t3_4" class="space"></td>
-                        <td id="t3_5" class="space"></td>
-                        <td id="t3_6" class="space"></td>
-                        <td id="t3_7" class="space"></td>
-                        <td id="t3_8" class="space"></td>
-                    </tr>
-                    <tr>
-                        <td id="t4_1" class="space"></td>
-                        <td id="t4_2" class="space"></td>
-                        <td id="t4_3" class="space"></td>
-                        <td id="t4_4" class="space"></td>
-                        <td id="t4_5" class="space"></td>
-                        <td id="t4_6" class="space"></td>
-                        <td id="t4_7" class="space"></td>
-                        <td id="t4_8" class="space"></td>
-                    </tr>
-                    <tr>
-                        <td id="t5_1" class="space"></td>
-                        <td id="t5_2" class="space"></td>
-                        <td id="t5_3" class="space"></td>
-                        <td id="t5_4" class="space"></td>
-                        <td id="t5_5" class="space"></td>
-                        <td id="t5_6" class="space"></td>
-                        <td id="t5_7" class="space"></td>
-                        <td id="t5_8" class="space"></td>
-                    </tr>
-                    <tr>
-                        <td id="t6_1" class="space"></td>
-                        <td id="t6_2" class="space"></td>
-                        <td id="t6_3" class="space"></td>
-                        <td id="t6_4" class="space"></td>
-                        <td id="t6_5" class="space"></td>
-                        <td id="t6_6" class="space"></td>
-                        <td id="t6_7" class="space"></td>
-                        <td id="t6_8" class="space"></td>
-                    </tr>
-                    <tr>
-                        <td id="t7_1" class="space"></td>
-                        <td id="t7_2" class="space"></td>
-                        <td id="t7_3" class="space"></td>
-                        <td id="t7_4" class="space"></td>
-                        <td id="t7_5" class="space"></td>
-                        <td id="t7_6" class="space"></td>
-                        <td id="t7_7" class="space"></td>
-                        <td id="t7_8" class="space"></td>
-                    </tr>
-                    <tr>
-                        <td id="t8_1" class="space"></td>
-                        <td id="t8_2" class="space"></td>
-                        <td id="t8_3" class="space"></td>
-                        <td id="t8_4" class="space"></td>
-                        <td id="t8_5" class="space"></td>
-                        <td id="t8_6" class="space"></td>
-                        <td id="t8_7" class="space"></td>
-                        <td id="t8_8" class="space"></td>
-                    </tr>
-                </table>
-            </div>
-            <div class="game_div" id="guide">
+    <header id="header">
+        <img src="./images/logo_200x200.png" alt="Pokechess Logo" id="nav_logo">
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./pokechess.html">Play Game</a>
+            <a href="./rules.html">Rules</a>
+        </nav>
+    </header>
+    <div id="play_area">
+        <div id="new_game_select">
+            <div class="player_div">
                 <div>
-                    <p>Player 1</p>
+                    <h1>Player 1</h1>
+                    <p>Type: 
+                        <select id="player1"> 
+                            <option id='p1_Normal' value="Normal">Normal</option>
+                            <option id='p1_Fighting' value="Fighting" hidden>Fighting</option>
+                            <option id='p1_Flying' value="Flying">Flying</option>
+                            <option id='p1_Poison' value="Poison">Poison</option>
+                            <option id='p1_Ground' value="Ground">Ground</option>
+                            <option id='p1_Rock' value="Rock">Rock</option>
+                            <option id='p1_Bug' value="Bug">Bug</option>
+                            <option id='p1_Ghost' value="Ghost">Ghost</option>
+                            <option id='p1_Steel' value="Steel">Steel</option>
+                            <option id='p1_Fire' value="Fire">Fire</option>
+                            <option id='p1_Water' value="Water">Water</option>
+                            <option id='p1_Grass' value="Grass">Grass</option>
+                            <option id='p1_Electric' value="Electric">Electric</option>
+                            <option id='p1_Psychic' value="Psychic">Psychic</option>
+                            <option id='p1_Ice' value="Ice">Ice</option>
+                            <option id='p1_Dragon' value="Dragon">Dragon</option>
+                            <option id='p1_Dark' value="Dark">Dark</option>
+                        </select>
+                    </p>
+                </div>
+                <div>
+                    <h1>Player 2</h1>
+                    <p>Type: 
+                        <select id="player2">
+                            <option id="p2_Normal" value="Normal" hidden>Normal</option>
+                            <option id="p2_Fighting" value="Fighting" selected>Fighting</option>
+                            <option id="p2_Flying" value="Flying">Flying</option>
+                            <option id="p2_Poison" value="Poison">Poison</option>
+                            <option id="p2_Ground" value="Ground">Ground</option>
+                            <option id="p2_Rock" value="Rock">Rock</option>
+                            <option id="p2_Bug" value="Bug">Bug</option>
+                            <option id="p2_Ghost" value="Ghost">Ghost</option>
+                            <option id="p2_Steel" value="Steel">Steel</option>
+                            <option id="p2_Fire" value="Fire">Fire</option>
+                            <option id="p2_Water" value="Water">Water</option>
+                            <option id="p2_Grass" value="Grass">Grass</option>
+                            <option id="p2_Electric" value="Electric">Electric</option>
+                            <option id="p2_Psychic" value="Psychic">Psychic</option>
+                            <option id="p2_Ice" value="Ice">Ice</option>
+                            <option id="p2_Dragon" value="Dragon">Dragon</option>
+                            <option id="p2_Dark" value="Dark">Dark</option>
+                        </select>
+                    </p>
+                </div>
+            </div>
+            <button id="start_game">Start Game</button>
+            <div id="loading" hidden></div>
+        </div>
+        <div id="game" hidden>
+            <div id="game_space">
+                <div class="game_div" id="board_div">
+                    <table id="board">
+                        <tr>
+                            <td id="t1_1" class="space"></td>
+                            <td id="t1_2" class="space"></td>
+                            <td id="t1_3" class="space"></td>
+                            <td id="t1_4" class="space"></td>
+                            <td id="t1_5" class="space"></td>
+                            <td id="t1_6" class="space"></td>
+                            <td id="t1_7" class="space"></td>
+                            <td id="t1_8" class="space"></td>
+                        </tr>
+                        <tr>
+                            <td id="t2_1" class="space"></td>
+                            <td id="t2_2" class="space"></td>
+                            <td id="t2_3" class="space"></td>
+                            <td id="t2_4" class="space"></td>
+                            <td id="t2_5" class="space"></td>
+                            <td id="t2_6" class="space"></td>
+                            <td id="t2_7" class="space"></td>
+                            <td id="t2_8" class="space"></td>
+                        </tr>
+                        <tr>
+                            <td id="t3_1" class="space"></td>
+                            <td id="t3_2" class="space"></td>
+                            <td id="t3_3" class="space"></td>
+                            <td id="t3_4" class="space"></td>
+                            <td id="t3_5" class="space"></td>
+                            <td id="t3_6" class="space"></td>
+                            <td id="t3_7" class="space"></td>
+                            <td id="t3_8" class="space"></td>
+                        </tr>
+                        <tr>
+                            <td id="t4_1" class="space"></td>
+                            <td id="t4_2" class="space"></td>
+                            <td id="t4_3" class="space"></td>
+                            <td id="t4_4" class="space"></td>
+                            <td id="t4_5" class="space"></td>
+                            <td id="t4_6" class="space"></td>
+                            <td id="t4_7" class="space"></td>
+                            <td id="t4_8" class="space"></td>
+                        </tr>
+                        <tr>
+                            <td id="t5_1" class="space"></td>
+                            <td id="t5_2" class="space"></td>
+                            <td id="t5_3" class="space"></td>
+                            <td id="t5_4" class="space"></td>
+                            <td id="t5_5" class="space"></td>
+                            <td id="t5_6" class="space"></td>
+                            <td id="t5_7" class="space"></td>
+                            <td id="t5_8" class="space"></td>
+                        </tr>
+                        <tr>
+                            <td id="t6_1" class="space"></td>
+                            <td id="t6_2" class="space"></td>
+                            <td id="t6_3" class="space"></td>
+                            <td id="t6_4" class="space"></td>
+                            <td id="t6_5" class="space"></td>
+                            <td id="t6_6" class="space"></td>
+                            <td id="t6_7" class="space"></td>
+                            <td id="t6_8" class="space"></td>
+                        </tr>
+                        <tr>
+                            <td id="t7_1" class="space"></td>
+                            <td id="t7_2" class="space"></td>
+                            <td id="t7_3" class="space"></td>
+                            <td id="t7_4" class="space"></td>
+                            <td id="t7_5" class="space"></td>
+                            <td id="t7_6" class="space"></td>
+                            <td id="t7_7" class="space"></td>
+                            <td id="t7_8" class="space"></td>
+                        </tr>
+                        <tr>
+                            <td id="t8_1" class="space"></td>
+                            <td id="t8_2" class="space"></td>
+                            <td id="t8_3" class="space"></td>
+                            <td id="t8_4" class="space"></td>
+                            <td id="t8_5" class="space"></td>
+                            <td id="t8_6" class="space"></td>
+                            <td id="t8_7" class="space"></td>
+                            <td id="t8_8" class="space"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="game_div" id="guide">
                     <div>
+                        <p>Player 1</p>
                         <div>
-                            <img id='player1pawn_guide' src="" alt="">
-                            <p>Pawn</p>
+                            <div>
+                                <img id='player1pawn_guide' src="./images/White_pawn.png" alt="">
+                                <p>Pawn</p>
+                            </div>
+                            <div>
+                                <img id='player1knight_guide' src="./images/White_knight.png" alt="">
+                                <p>Knight</p>
+                            </div>
+                            <div>
+                                <img id='player1bishop_guide' src="./images/White_bishop.png" alt="">
+                                <p>Bishop</p>
+                            </div>
+                            <div>
+                                <img id='player1rook_guide' src="./images/White_rook.png" alt="">
+                                <p>Rook</p>
+                            </div>
+                            <div>
+                                <img id='player1queen_guide' src="./images/White_queen.png" alt="">
+                                <p>Queen</p>
+                            </div>
+                            <div>
+                                <img id='player1king_guide' src="./images/White_king.png" alt="">
+                                <p>King</p>
+                            </div>
                         </div>
+                    </div>
+                    <div>
+                        <p>Player 2</p>
                         <div>
-                            <img id='player1knight_guide' src="" alt="">
-                            <p>Knight</p>
-                        </div>
-                        <div>
-                            <img id='player1bishop_guide' src="" alt="">
-                            <p>Bishop</p>
-                        </div>
-                        <div>
-                            <img id='player1rook_guide' src="" alt="">
-                            <p>Rook</p>
-                        </div>
-                        <div>
-                            <img id='player1queen_guide' src="" alt="">
-                            <p>Queen</p>
-                        </div>
-                        <div>
-                            <img id='player1king_guide' src="" alt="">
-                            <p>King</p>
+                            <div>
+                                <img id='player2pawn_guide' src="./images/Black_pawn.png" alt="">
+                                <p>Pawn</p>
+                            </div>
+                            <div>
+                                <img id='player2knight_guide' src="./images/Black_knight.png" alt="">
+                                <p>Knight</p>
+                            </div>
+                            <div>
+                                <img id='player2bishop_guide' src="./images/Black_bishop.png" alt="">
+                                <p>Bishop</p>
+                            </div>
+                            <div>
+                                <img id='player2rook_guide' src="./images/Black_rook.png" alt="">
+                                <p>Rook</p>
+                            </div>
+                            <div>
+                                <img id='player2queen_guide' src="./images/Black_queen.png" alt="">
+                                <p>Queen</p>
+                            </div>
+                            <div>
+                                <img id='player2king_guide' src="./images/Black_king.png" alt="">
+                                <p>King</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div id="promotion1" class="promotion" hidden>
+            <div>
                 <div>
-                    <p>Player 2</p>
-                    <div>
-                        <div>
-                            <img id='player2pawn_guide' src="" alt="">
-                            <p>Pawn</p>
-                        </div>
-                        <div>
-                            <img id='player2knight_guide' src="" alt="">
-                            <p>Knight</p>
-                        </div>
-                        <div>
-                            <img id='player2bishop_guide' src="" alt="">
-                            <p>Bishop</p>
-                        </div>
-                        <div>
-                            <img id='player2rook_guide' src="" alt="">
-                            <p>Rook</p>
-                        </div>
-                        <div>
-                            <img id='player2queen_guide' src="" alt="">
-                            <p>Queen</p>
-                        </div>
-                        <div>
-                            <img id='player2king_guide' src="" alt="">
-                            <p>King</p>
-                        </div>
-                    </div>
+                    <img id='promotion1Knight' src="./images/White_knight.png" alt="">
+                    <p>Knight</p>
+                </div>
+                <div>
+                    <img id='promotion1Bishop' src="./images/White_bishop.png" alt="">
+                    <p>Bishop</p>
+                </div>
+                <div>
+                    <img id='promotion1Rook' src="./images/White_rook.png" alt="">
+                    <p>Rook</p>
+                </div>
+                <div>
+                    <img id='promotion1Queen' src="./images/White_queen.png" alt="">
+                    <p>Queen</p>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="promotion1" class="promotion" hidden>
-        <div>
+        <div id="promotion2" class="promotion" hidden>
             <div>
-                <img id='promotion1Knight' src="" alt="">
-                <p>Knight</p>
-            </div>
-            <div>
-                <img id='promotion1Bishop' src="" alt="">
-                <p>Bishop</p>
-            </div>
-            <div>
-                <img id='promotion1Rook' src="" alt="">
-                <p>Rook</p>
-            </div>
-            <div>
-                <img id='promotion1Queen' src="" alt="">
-                <p>Queen</p>
-            </div>
-        </div>
-    </div>
-    <div id="promotion2" class="promotion" hidden>
-        <div>
-            <div>
-                <img id='promotion2Knight' src="" alt="">
-                <p>Knight</p>
-            </div>
-            <div>
-                <img id='promotion2Bishop' src="" alt="">
-                <p>Bishop</p>
-            </div>
-            <div>
-                <img id='promotion2Rook' src="" alt="">
-                <p>Rook</p>
-            </div>
-            <div>
-                <img id='promotion2Queen' src="" alt="">
-                <p>Queen</p>
+                <div>
+                    <img id='promotion2Knight' src="./images/Black_knight.png" alt="">
+                    <p>Knight</p>
+                </div>
+                <div>
+                    <img id='promotion2Bishop' src="./images/Black_bishop.png" alt="">
+                    <p>Bishop</p>
+                </div>
+                <div>
+                    <img id='promotion2Rook' src="./images/Black_rook.png" alt="">
+                    <p>Rook</p>
+                </div>
+                <div>
+                    <img id='promotion2Queen' src="./images/Black_queen.png" alt="">
+                    <p>Queen</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="game_end" hidden>
-        <h1>Congratulations!</h1>
-        <h2>Player <span id="winner"></span> won!</h2>
-    </div>
-    <div id="stalemate" hidden>
-        <h1>Stalemate!</h1>
-        <h2>Better luck next time</h2>
-    </div>
-    <button id="new_game" hidden>New Game</button>
-    <button id="forfeit" hidden>Forfeit</button>
-    <!-- <div id="new_game_button" hidden>
-        <button class="new_game">New Game</button>
+        <div id="game_end" hidden>
+            <h1>Congratulations!</h1>
+            <h2>Player <span id="winner"></span> won!</h2>
+        </div>
+        <div id="stalemate" hidden>
+            <h1>Stalemate!</h1>
+            <h2>Better luck next time</h2>
+        </div>
+        <button id="new_game" hidden>New Game</button>
+        <button id="forfeit" hidden>Forfeit</button>
+        <!-- <div id="new_game_button" hidden>
+            <button class="new_game">New Game</button>
     </div> -->
+    </div>
     <script src="./scripts/main.js" type='module'></script>
 </body>
 </html>

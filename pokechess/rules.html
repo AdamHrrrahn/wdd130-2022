@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokechess Rules</title>
+    <link rel="stylesheet" href="./styles/rules.css">
+</head>
+<body>
+    <header id="header">
+        <img src="./images/logo_200x200.png" alt="Pokechess Logo" id="nav_logo">
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./pokechess.html">Play Game</a>
+            <a href="./rules.html">Rules</a>
+        </nav>
+    </header>
+    <div id="general_rules">
+        <h2>General Rules</h2>
+        <div>
+            <ul>
+                <li>This is a two-player chess game.</li>
+                <li>Play Starts with Player 1, and alternates bewtween each player making one move.</li>
+                <li>Player 1's pieces start at the top of hte board, and player 2's pieces start at the bottom.</li>
+                <li>Each turn the current player must make one valid move. possible moves for each piece are described below.</li>
+                <li>A move is valid if:
+                    <ol>
+                        <li>The target space is unocupied or occupied by an opposing piece.</li>
+                        <li>After the move is made, the current player is not in check.</li>
+                        <li>advanced moves such as castling or en passant are not considered valid for this game.</li>
+                    </ol>
+                </li>
+                <li>If a piece ends its move on the same space as an opposing piece, that piece is 'taken' and removed from the game.</li>
+                <li>If the current player is in check and has no valid moves, they are in checkmate and lose the game.</li>
+                <li>If the current player is not in check and has no valid moves, the game is a stalemate, or draw.</li>
+                <li>At any time, the game can be reset by cliking the new game button or refreshing the page.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="King_rules" class="piece_rule">
+        <h2>King</h2>
+        <table>
+            <tr>
+                <td id="Kit1_1" class="space"></td>
+                <td id="Kit1_2" class="space"></td>
+                <td id="Kit1_3" class="space"></td>
+                <td id="Kit1_4" class="space"></td>
+                <td id="Kit1_5" class="space"></td>
+                <td id="Kit1_6" class="space"></td>
+                <td id="Kit1_7" class="space"></td>
+                <td id="Kit1_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Kit2_1" class="space"></td>
+                <td id="Kit2_2" class="space"></td>
+                <td id="Kit2_3" class="space"></td>
+                <td id="Kit2_4" class="space"></td>
+                <td id="Kit2_5" class="space"></td>
+                <td id="Kit2_6" class="space"></td>
+                <td id="Kit2_7" class="space"></td>
+                <td id="Kit2_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Kit3_1" class="space"></td>
+                <td id="Kit3_2" class="space"></td>
+                <td id="Kit3_3" class="space"></td>
+                <td id="Kit3_4" class="space"><div class="highlight"></div></td>
+                <td id="Kit3_5" class="space"><div class="highlight"></div></td>
+                <td id="Kit3_6" class="space"><div class="highlight"></div></td>
+                <td id="Kit3_7" class="space"></td>
+                <td id="Kit3_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Kit4_1" class="space"></td>
+                <td id="Kit4_2" class="space"></td>
+                <td id="Kit4_3" class="space"></td>
+                <td id="Kit4_4" class="space"><div class="highlight"></div></td>
+                <td id="Kit4_5" class="space"><img src="./images/White_king.png" alt="White King Piece"></td>
+                <td id="Kit4_6" class="space"><div class="highlight"></div></td>
+                <td id="Kit4_7" class="space"></td>
+                <td id="Kit4_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Kit5_1" class="space"></td>
+                <td id="Kit5_2" class="space"></td>
+                <td id="Kit5_3" class="space"></td>
+                <td id="Kit5_4" class="space"><div class="highlight"></div></td>
+                <td id="Kit5_5" class="space"><div class="highlight"></div></td>
+                <td id="Kit5_6" class="space"><div class="highlight"></div></td>
+                <td id="Kit5_7" class="space"></td>
+                <td id="Kit5_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Kit6_1" class="space"></td>
+                <td id="Kit6_2" class="space"></td>
+                <td id="Kit6_3" class="space"></td>
+                <td id="Kit6_4" class="space"></td>
+                <td id="Kit6_5" class="space"></td>
+                <td id="Kit6_6" class="space"></td>
+                <td id="Kit6_7" class="space"></td>
+                <td id="Kit6_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Kit7_1" class="space"></td>
+                <td id="Kit7_2" class="space"></td>
+                <td id="Kit7_3" class="space"></td>
+                <td id="Kit7_4" class="space"></td>
+                <td id="Kit7_5" class="space"></td>
+                <td id="Kit7_6" class="space"></td>
+                <td id="Kit7_7" class="space"></td>
+                <td id="Kit7_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Kit8_1" class="space"></td>
+                <td id="Kit8_2" class="space"></td>
+                <td id="Kit8_3" class="space"></td>
+                <td id="Kit8_4" class="space"></td>
+                <td id="Kit8_5" class="space"></td>
+                <td id="Kit8_6" class="space"></td>
+                <td id="Kit8_7" class="space"></td>
+                <td id="Kit8_8" class="space"></td>
+            </tr>
+        </table>
+        <div class="rule_div">
+            <p>The King may move one space horizontally, vertically, or diagonally. The King may not move into check.</p>
+        </div>
+    </div>
+    <div id="Queen_rules" class="piece_rule">
+        <h2>Queen</h2>
+        <table>
+            <tr>
+                <td id="Qt1_1" class="space"><div class="highlight"></div></td>
+                <td id="Qt1_2" class="space"></td>
+                <td id="Qt1_3" class="space"></td>
+                <td id="Qt1_4" class="space"><div class="highlight"></div></td>
+                <td id="Qt1_5" class="space"></td>
+                <td id="Qt1_6" class="space"></td>
+                <td id="Qt1_7" class="space"><div class="highlight"></div></td>
+                <td id="Qt1_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Qt2_1" class="space"></td>
+                <td id="Qt2_2" class="space"><div class="highlight"></div></td>
+                <td id="Qt2_3" class="space"></td>
+                <td id="Qt2_4" class="space"><div class="highlight"></div></td>
+                <td id="Qt2_5" class="space"></td>
+                <td id="Qt2_6" class="space"><div class="highlight"></div></td>
+                <td id="Qt2_7" class="space"></td>
+                <td id="Qt2_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Qt3_1" class="space"></td>
+                <td id="Qt3_2" class="space"></td>
+                <td id="Qt3_3" class="space"><div class="highlight"></div></td>
+                <td id="Qt3_4" class="space"><div class="highlight"></div></td>
+                <td id="Qt3_5" class="space"><div class="highlight"></div></td>
+                <td id="Qt3_6" class="space"></td>
+                <td id="Qt3_7" class="space"></td>
+                <td id="Qt3_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Qt4_1" class="space"><div class="highlight"></div></td>
+                <td id="Qt4_2" class="space"><div class="highlight"></div></td>
+                <td id="Qt4_3" class="space"><div class="highlight"></div></td>
+                <td id="Qt4_4" class="space"><img src="./images/White_queen.png" alt="White Queen Piece"></td>
+                <td id="Qt4_5" class="space"><div class="highlight"></div></td>
+                <td id="Qt4_6" class="space"><div class="highlight"></div></td>
+                <td id="Qt4_7" class="space"><div class="highlight"></div></td>
+                <td id="Qt4_8" class="space"><div class="highlight"></div></td>
+            </tr>
+            <tr>
+                <td id="Qt5_1" class="space"></td>
+                <td id="Qt5_2" class="space"></td>
+                <td id="Qt5_3" class="space"><div class="highlight"></div></td>
+                <td id="Qt5_4" class="space"><div class="highlight"></div></td>
+                <td id="Qt5_5" class="space"><div class="highlight"></div></td>
+                <td id="Qt5_6" class="space"></td>
+                <td id="Qt5_7" class="space"></td>
+                <td id="Qt5_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Qt6_1" class="space"></td>
+                <td id="Qt6_2" class="space"><div class="highlight"></div></td>
+                <td id="Qt6_3" class="space"></td>
+                <td id="Qt6_4" class="space"><div class="highlight"></div></td>
+                <td id="Qt6_5" class="space"></td>
+                <td id="Qt6_6" class="space"><div class="highlight"></div></td>
+                <td id="Qt6_7" class="space"></td>
+                <td id="Qt6_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Qt7_1" class="space"><div class="highlight"></div></td>
+                <td id="Qt7_2" class="space"></td>
+                <td id="Qt7_3" class="space"></td>
+                <td id="Qt7_4" class="space"><div class="highlight"></div></td>
+                <td id="Qt7_5" class="space"></td>
+                <td id="Qt7_6" class="space"></td>
+                <td id="Qt7_7" class="space"><div class="highlight"></div></td>
+                <td id="Qt7_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Qt8_1" class="space"></td>
+                <td id="Qt8_2" class="space"></td>
+                <td id="Qt8_3" class="space"></td>
+                <td id="Qt8_4" class="space"><div class="highlight"></div></td>
+                <td id="Qt8_5" class="space"></td>
+                <td id="Qt8_6" class="space"></td>
+                <td id="Qt8_7" class="space"></td>
+                <td id="Qt8_8" class="space"><div class="highlight"></div></td>
+            </tr>
+        </table>
+        <div class="rule_div">
+            <p>A queen may move any number of spaces horizontally, vertically, or diagonally. A queen may not move through other pieces.</p>
+        </div>
+    </div>
+    <div id="Rook_rules" class="piece_rule">
+        <h2>Rook</h2>
+        <table>
+            <tr>
+                <td id="Rt1_1" class="space"></td>
+                <td id="Rt1_2" class="space"></td>
+                <td id="Rt1_3" class="space"></td>
+                <td id="Rt1_4" class="space"><div class="highlight"></div></td>
+                <td id="Rt1_5" class="space"></td>
+                <td id="Rt1_6" class="space"></td>
+                <td id="Rt1_7" class="space"></td>
+                <td id="Rt1_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Rt2_1" class="space"></td>
+                <td id="Rt2_2" class="space"></td>
+                <td id="Rt2_3" class="space"></td>
+                <td id="Rt2_4" class="space"><div class="highlight"></div></td>
+                <td id="Rt2_5" class="space"></td>
+                <td id="Rt2_6" class="space"></td>
+                <td id="Rt2_7" class="space"></td>
+                <td id="Rt2_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Rt3_1" class="space"></td>
+                <td id="Rt3_2" class="space"></td>
+                <td id="Rt3_3" class="space"></td>
+                <td id="Rt3_4" class="space"><div class="highlight"></div></td>
+                <td id="Rt3_5" class="space"></td>
+                <td id="Rt3_6" class="space"></td>
+                <td id="Rt3_7" class="space"></td>
+                <td id="Rt3_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Rt4_1" class="space"><div class="highlight"></div></td>
+                <td id="Rt4_2" class="space"><div class="highlight"></div></td>
+                <td id="Rt4_3" class="space"><div class="highlight"></div></td>
+                <td id="Rt4_4" class="space"><img src="./images/White_rook.png" alt="White Rook Piece"></td>
+                <td id="Rt4_5" class="space"><div class="highlight"></div></td>
+                <td id="Rt4_6" class="space"><div class="highlight"></div></td>
+                <td id="Rt4_7" class="space"><div class="highlight"></div></td>
+                <td id="Rt4_8" class="space"><div class="highlight"></div></td>
+            </tr>
+            <tr>
+                <td id="Rt5_1" class="space"></td>
+                <td id="Rt5_2" class="space"></td>
+                <td id="Rt5_3" class="space"></td>
+                <td id="Rt5_4" class="space"><div class="highlight"></div></td>
+                <td id="Rt5_5" class="space"></td>
+                <td id="Rt5_6" class="space"></td>
+                <td id="Rt5_7" class="space"></td>
+                <td id="Rt5_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Rt6_1" class="space"></td>
+                <td id="Rt6_2" class="space"></td>
+                <td id="Rt6_3" class="space"></td>
+                <td id="Rt6_4" class="space"><div class="highlight"></div></td>
+                <td id="Rt6_5" class="space"></td>
+                <td id="Rt6_6" class="space"></td>
+                <td id="Rt6_7" class="space"></td>
+                <td id="Rt6_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Rt7_1" class="space"></td>
+                <td id="Rt7_2" class="space"></td>
+                <td id="Rt7_3" class="space"></td>
+                <td id="Rt7_4" class="space"><div class="highlight"></div></td>
+                <td id="Rt7_5" class="space"></td>
+                <td id="Rt7_6" class="space"></td>
+                <td id="Rt7_7" class="space"></td>
+                <td id="Rt7_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Rt8_1" class="space"></td>
+                <td id="Rt8_2" class="space"></td>
+                <td id="Rt8_3" class="space"></td>
+                <td id="Rt8_4" class="space"><div class="highlight"></div></td>
+                <td id="Rt8_5" class="space"></td>
+                <td id="Rt8_6" class="space"></td>
+                <td id="Rt8_7" class="space"></td>
+                <td id="Rt8_8" class="space"></td>
+            </tr>
+        </table>
+        <div class="rule_div">
+            <p>A rook may move any number of spaces horizontally, or vertically. A rook may not move through other pieces.</p>
+        </div>
+    </div>
+    <div id="Bishop_rules" class="piece_rule">
+        <h2>Bishop</h2>
+        <table>
+            <tr>
+                <td id="Bt1_1" class="space"><div class="highlight"></div></td>
+                <td id="Bt1_2" class="space"></td>
+                <td id="Bt1_3" class="space"></td>
+                <td id="Bt1_4" class="space"></td>
+                <td id="Bt1_5" class="space"></td>
+                <td id="Bt1_6" class="space"></td>
+                <td id="Bt1_7" class="space"><div class="highlight"></div></td>
+                <td id="Bt1_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Bt2_1" class="space"></td>
+                <td id="Bt2_2" class="space"><div class="highlight"></div></td>
+                <td id="Bt2_3" class="space"></td>
+                <td id="Bt2_4" class="space"></td>
+                <td id="Bt2_5" class="space"></td>
+                <td id="Bt2_6" class="space"><div class="highlight"></div></td>
+                <td id="Bt2_7" class="space"></td>
+                <td id="Bt2_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Bt3_1" class="space"></td>
+                <td id="Bt3_2" class="space"></td>
+                <td id="Bt3_3" class="space"><div class="highlight"></div></td>
+                <td id="Bt3_4" class="space"></td>
+                <td id="Bt3_5" class="space"><div class="highlight"></div></td>
+                <td id="Bt3_6" class="space"></td>
+                <td id="Bt3_7" class="space"></td>
+                <td id="Bt3_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Bt4_1" class="space"></td>
+                <td id="Bt4_2" class="space"></td>
+                <td id="Bt4_3" class="space"></td>
+                <td id="Bt4_4" class="space"><img src="./images/White_bishop.png" alt="White Bishop Piece"></td>
+                <td id="Bt4_5" class="space"></td>
+                <td id="Bt4_6" class="space"></td>
+                <td id="Bt4_7" class="space"></td>
+                <td id="Bt4_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Bt5_1" class="space"></td>
+                <td id="Bt5_2" class="space"></td>
+                <td id="Bt5_3" class="space"><div class="highlight"></div></td>
+                <td id="Bt5_4" class="space"></td>
+                <td id="Bt5_5" class="space"><div class="highlight"></div></td>
+                <td id="Bt5_6" class="space"></td>
+                <td id="Bt5_7" class="space"></td>
+                <td id="Bt5_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Bt6_1" class="space"></td>
+                <td id="Bt6_2" class="space"><div class="highlight"></div></td>
+                <td id="Bt6_3" class="space"></td>
+                <td id="Bt6_4" class="space"></td>
+                <td id="Bt6_5" class="space"></td>
+                <td id="Bt6_6" class="space"><div class="highlight"></div></td>
+                <td id="Bt6_7" class="space"></td>
+                <td id="Bt6_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Bt7_1" class="space"><div class="highlight"></div></td>
+                <td id="Bt7_2" class="space"></td>
+                <td id="Bt7_3" class="space"></td>
+                <td id="Bt7_4" class="space"></td>
+                <td id="Bt7_5" class="space"></td>
+                <td id="Bt7_6" class="space"></td>
+                <td id="Bt7_7" class="space"><div class="highlight"></div></td>
+                <td id="Bt7_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Bt8_1" class="space"></td>
+                <td id="Bt8_2" class="space"></td>
+                <td id="Bt8_3" class="space"></td>
+                <td id="Bt8_4" class="space"></td>
+                <td id="Bt8_5" class="space"></td>
+                <td id="Bt8_6" class="space"></td>
+                <td id="Bt8_7" class="space"></td>
+                <td id="Bt8_8" class="space"><div class="highlight"></div></td>
+            </tr>
+        </table>
+        <div class="rule_div">
+            <p>A bishop may move any number of spaces diagonally. The bishop may not move through other pieces.</p>
+        </div>
+    </div>
+    <div id="Knight_rules" class="piece_rule">
+        <h2>Knight</h2>
+        <table>
+            <tr>
+                <td id="Kt1_1" class="space"></td>
+                <td id="Kt1_2" class="space"></td>
+                <td id="Kt1_3" class="space"></td>
+                <td id="Kt1_4" class="space"></td>
+                <td id="Kt1_5" class="space"></td>
+                <td id="Kt1_6" class="space"></td>
+                <td id="Kt1_7" class="space"></td>
+                <td id="Kt1_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Kt2_1" class="space"></td>
+                <td id="Kt2_2" class="space"></td>
+                <td id="Kt2_3" class="space"><div class="highlight"></div></td>
+                <td id="Kt2_4" class="space"></td>
+                <td id="Kt2_5" class="space"><div class="highlight"></div></td>
+                <td id="Kt2_6" class="space"></td>
+                <td id="Kt2_7" class="space"></td>
+                <td id="Kt2_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Kt3_1" class="space"></td>
+                <td id="Kt3_2" class="space"><div class="highlight"></div></td>
+                <td id="Kt3_3" class="space"></td>
+                <td id="Kt3_4" class="space"></td>
+                <td id="Kt3_5" class="space"></td>
+                <td id="Kt3_6" class="space"><div class="highlight"></div></td>
+                <td id="Kt3_7" class="space"></td>
+                <td id="Kt3_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Kt4_1" class="space"></td>
+                <td id="Kt4_2" class="space"></td>
+                <td id="Kt4_3" class="space"></td>
+                <td id="Kt4_4" class="space"><img src="./images/White_knight.png" alt="White Knight Piece"></td>
+                <td id="Kt4_5" class="space"></td>
+                <td id="Kt4_6" class="space"></td>
+                <td id="Kt4_7" class="space"></td>
+                <td id="Kt4_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Kt5_1" class="space"></td>
+                <td id="Kt5_2" class="space"><div class="highlight"></div></td>
+                <td id="Kt5_3" class="space"></td>
+                <td id="Kt5_4" class="space"></td>
+                <td id="Kt5_5" class="space"></td>
+                <td id="Kt5_6" class="space"><div class="highlight"></div></td>
+                <td id="Kt5_7" class="space"></td>
+                <td id="Kt5_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Kt6_1" class="space"></td>
+                <td id="Kt6_2" class="space"></td>
+                <td id="Kt6_3" class="space"><div class="highlight"></div></td>
+                <td id="Kt6_4" class="space"></td>
+                <td id="Kt6_5" class="space"><div class="highlight"></div></td>
+                <td id="Kt6_6" class="space"></td>
+                <td id="Kt6_7" class="space"></td>
+                <td id="Kt6_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Kt7_1" class="space"></td>
+                <td id="Kt7_2" class="space"></td>
+                <td id="Kt7_3" class="space"></td>
+                <td id="Kt7_4" class="space"></td>
+                <td id="Kt7_5" class="space"></td>
+                <td id="Kt7_6" class="space"></td>
+                <td id="Kt7_7" class="space"></td>
+                <td id="Kt7_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Kt8_1" class="space"></td>
+                <td id="Kt8_2" class="space"></td>
+                <td id="Kt8_3" class="space"></td>
+                <td id="Kt8_4" class="space"></td>
+                <td id="Kt8_5" class="space"></td>
+                <td id="Kt8_6" class="space"></td>
+                <td id="Kt8_7" class="space"></td>
+                <td id="Kt8_8" class="space"></td>
+            </tr>
+        </table>
+        <div class="rule_div">
+            <p>The knight can choose one of the following movement options:</p>
+            <ul>
+                <li>The knight may move two spaces horizontally followed by one space vertically</li>
+                <li>The knight may move two spaces vertically followed by one space horizontally</li>
+            </ul>
+            <p>The knight may pass through other pieces. only The opposing piece at the final destination is taken.</p>
+        </div>
+    </div>
+    <div id="Pawn_rules" class="piece_rule">
+        <h2>Pawn</h2>
+        <table>
+            <tr>
+                <td id="Pt1_1" class="space"></td>
+                <td id="Pt1_2" class="space"></td>
+                <td id="Pt1_3" class="space"></td>
+                <td id="Pt1_4" class="space"></td>
+                <td id="Pt1_5" class="space"></td>
+                <td id="Pt1_6" class="space"></td>
+                <td id="Pt1_7" class="space"></td>
+                <td id="Pt1_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Pt2_1" class="space"></td>
+                <td id="Pt2_2" class="space"><img src="./images/White_pawn.png" alt="White Pawn Piece"></td>
+                <td id="Pt2_3" class="space"></td>
+                <td id="Pt2_4" class="space"></td>
+                <td id="Pt2_5" class="space"></td>
+                <td id="Pt2_6" class="space"></td>
+                <td id="Pt2_7" class="space"></td>
+                <td id="Pt2_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Pt3_1" class="space"><div class="highlight"><img src="./images/crossed-swords_2694-fe0f.png" alt="Crossed Swords" class="swords"></div></td>
+                <td id="Pt3_2" class="space"><div class="highlight"></div></td>
+                <td id="Pt3_3" class="space"><div class="highlight"><img src="./images/crossed-swords_2694-fe0f.png" alt="Crossed Swords" class="swords"></div></td>
+                <td id="Pt3_4" class="space"></td>
+                <td id="Pt3_5" class="space"></td>
+                <td id="Pt3_6" class="space"></td>
+                <td id="Pt3_7" class="space"></td>
+                <td id="Pt3_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Pt4_1" class="space"></td>
+                <td id="Pt4_2" class="space"><div class="highlight"><p>1st</p></div></td>
+                <td id="Pt4_3" class="space"></td>
+                <td id="Pt4_4" class="space"></td>
+                <td id="Pt4_5" class="space"></td>
+                <td id="Pt4_6" class="space"></td>
+                <td id="Pt4_7" class="space"></td>
+                <td id="Pt4_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Pt5_1" class="space"></td>
+                <td id="Pt5_2" class="space"></td>
+                <td id="Pt5_3" class="space"></td>
+                <td id="Pt5_4" class="space"></td>
+                <td id="Pt5_5" class="space"></td>
+                <td id="Pt5_6" class="space"></td>
+                <td id="Pt5_7" class="space"><div class="highlight"><p>1st</p></div></td>
+                <td id="Pt5_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Pt6_1" class="space"></td>
+                <td id="Pt6_2" class="space"></td>
+                <td id="Pt6_3" class="space"></td>
+                <td id="Pt6_4" class="space"></td>
+                <td id="Pt6_5" class="space"></td>
+                <td id="Pt6_6" class="space"><div class="highlight"><img src="./images/crossed-swords_2694-fe0f.png" alt="crossed swords" class="swords"></div></td>
+                <td id="Pt6_7" class="space"><div class="highlight"></div></td>
+                <td id="Pt6_8" class="space"><div class="highlight"><img src="./images/crossed-swords_2694-fe0f.png" alt="crossed swords" class="swords"></div></td>
+            </tr>
+            <tr>
+                <td id="Pt7_1" class="space"></td>
+                <td id="Pt7_2" class="space"></td>
+                <td id="Pt7_3" class="space"></td>
+                <td id="Pt7_4" class="space"></td>
+                <td id="Pt7_5" class="space"></td>
+                <td id="Pt7_6" class="space"></td>
+                <td id="Pt7_7" class="space"><img src="./images/Black_pawn.png" alt="Black Pawn Piece"></td>
+                <td id="Pt7_8" class="space"></td>
+            </tr>
+            <tr>
+                <td id="Pt8_1" class="space"></td>
+                <td id="Pt8_2" class="space"></td>
+                <td id="Pt8_3" class="space"></td>
+                <td id="Pt8_4" class="space"></td>
+                <td id="Pt8_5" class="space"></td>
+                <td id="Pt8_6" class="space"></td>
+                <td id="Pt8_7" class="space"></td>
+                <td id="Pt8_8" class="space"></td>
+            </tr>
+        </table>
+        <div class="rule_div">
+            <p>The pawn can choose one of the following movement options, if applicable:</p>
+            <ol>
+                <li>The pawn can move one space vertically towards the opposing player's side of the board. this may not take opposing pieces.</li>
+                <li>if the pawn has not yet moved, it can move two spaces vertically towards the opposing player's side of the board. This may not take opposing pieces. the pawn cannot move through outher pieces.</li>
+                <li>If There is an opposing piece in a space horizontally adjacent to the space the pawn would move to in option one, the pawn make move to that space and take the opposing piece.</li>
+            </ol>
+            <p>If the pawn ends its tuen on the opposing player's back line, that pawn is promoted to one of the following pieces and take's it's aapearance and moveset: Queen, Rook, Bishop, Knight.</p>
+        </div>
+    </div>
+</body>
+</html>

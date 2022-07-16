@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@font-face {
+  font-family: "Decotura";
+  src:url('../fonts/11000_DecoturaICG.ttf');
+}
+
+:root {
+    --primary-color: #396E94   ;
+    --secondary-color: #E7C24F ;
+    --accent1-color: #A42212;
+    --accent2-color: white;
+  
+    --heading-font: "Decotura";
+    --paragraph-font: "Roboto Mono";
+}
+
+header{
+    width: 100vw;
+    height: 10vh;
+    background-color: #A42212;
+    padding: 0;
+    display: flex;
+    position: fixed;
+    top: 0;
+    margin: 0;   
+    left: 0; 
+    z-index: 4;
+}
+header img{
+    height: 90%;
+    margin: 0.5vh 1%;
+    vertical-align: center;
+}
+header a{
+    font-size: 8vh;
+    height: 9vh;
+    margin: 1vh 1%;
+}
+
+nav {
+    width: 50%;
+    white-space: nowrap;
+    text-align: center;
+    list-style-type: none;
+    display: flex;
+    background-color: #A42212;
+}
+nav a, nav a:visited {
+    font-family: var(--heading-font);
+    margin: auto;
+    height: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+nav a:link, nav a:visited {
+    color: #E7C24F;
+    text-decoration: none;
+}
+nav a:hover{
+    color: #A42212;
+    background-color: #631AEE;
+}
+body{
+    background-color: #396E94;
+    padding-top: 10vh;
+    padding-left: 0;
+    padding-bottom: 5vh;
+}
+h2{
+    font-family: var(--heading-font);
+    letter-spacing: 0.2em;
+    color: #E7C24F;
+    margin-left: 2vw;
+}
+p,li{
+    font-family: var(--paragraph-font);
+    color: #E7C24F;
+}
+#general_rules{
+    background-color: #A42212;
+    width: 90vw;
+    margin-top: 5vh; 
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-radius: 2vh;
+    border-color: #E7C24F;
+    border-width: 1vh;
+    border-style: solid;
+}
+.piece_rule{
+    border-style: solid;
+    border-width: 1vh;
+    border-color: #E7C24F;
+    border-radius: 2vh;
+    background-color: #A42212;
+    width: 90vw;
+    margin-top: 5vh; 
+    margin-left: 5vw;
+    margin-right: 5vw;
+    display: grid;
+    grid-template-columns: 36vh calc(90vw - 36vh);
+}
+.piece_rule h2{
+    grid-row: 1;
+}
+.rule_div{
+    font-family: var(--paragraph-font);
+    grid-row: 2;
+    text-align: left;
+    margin-left: 0;
+}
+
+table tr:nth-child(even) td:nth-child(even), table tr:nth-child(odd) td:nth-child(odd){
+    background-color: black;
+    z-index: 1;
+    position: relative;
+}
+
+table tr:nth-child(odd) td:nth-child(even), table tr:nth-child(even) td:nth-child(odd){
+    background-color: white;
+    z-index: 1;
+    position: relative;
+}
+
+table{
+    height: 32vh;
+    width: 32vh;
+    border-collapse: collapse;
+    grid-row: 2;
+    margin: 2vh;
+}
+tr{
+    padding: 0;
+    margin: 0;
+}
+td{
+    width: calc(4vh);
+    height: 4vh;
+    margin: 0;
+    padding: 0;
+}
+td img{
+    background-color: white;
+    width: 3vh;
+    height: 3vh;
+    margin: 0.5vh;
+    padding: 0;
+}
+.highlight{
+    background-color: rgba(0,0,255, 0.4);
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 3;
+    width: 4vh;
+    height: 4vh;
+}
+#pawn_p{
+    grid-column: 2;
+    grid-row: 2;
+}
